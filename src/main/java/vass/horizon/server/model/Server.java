@@ -3,7 +3,7 @@ package vass.horizon.server.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import vass.horizon.server.enumeration.Status;
+import vass.horizon.server.enumeration.StatusEnumeration;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,7 +17,7 @@ import static javax.persistence.GenerationType.AUTO;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class server {
+public class Server {
     @Id
     @GeneratedValue(strategy=AUTO)
     private Long id;
@@ -28,5 +28,5 @@ public class server {
     private String memory;
     private String type;
     private String imageUrl;
-    private Status status;
+    private StatusEnumeration status;
 }
